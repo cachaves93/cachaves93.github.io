@@ -24,9 +24,9 @@
 <script>
    function postMessage(status) {
       if (status === 'success') {
-         window.parent.postMessage({ sucess: true })
+         window.parent.postMessage(JSON.stringify({ sucess: true }))
       } else {
-         window.parent.postMessage({ sucess: false })
+         window.parent.postMessage(JSON.stringify({ sucess: false }))
       }
    }
 </script>
