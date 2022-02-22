@@ -13,4 +13,20 @@
   >
     </a>
  </div>
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+<script 
+   src="https://platform.linkedin.com/badges/js/profile.js" 
+   async 
+   defer 
+   type="text/javascript"
+   onload="postMessage('sucess')"
+   onerror="postMessage('error')"
+></script>
+<script>
+   function postMessage(status) {
+      if (status === 'success') {
+         window.parent.postMessage({ sucess: true })
+      } else {
+         window.parent.postMessage({ sucess: false })
+      }
+   }
+</script>
